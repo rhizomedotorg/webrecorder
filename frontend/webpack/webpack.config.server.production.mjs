@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path';
 import { merge } from 'webpack-merge';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';

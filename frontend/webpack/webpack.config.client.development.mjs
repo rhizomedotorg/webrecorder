@@ -1,5 +1,5 @@
 import CopyPlugin from 'copy-webpack-plugin';
-//import CircularDependencyPlugin from 'circular-dependency-plugin';
+
 import ESLintPlugin from 'eslint-webpack-plugin';
 import { merge } from 'webpack-merge';
 import webpack from 'webpack';
@@ -100,7 +100,7 @@ const devConfig = {
   resolve: {
     alias: {
       'react-dom$': 'react-dom/profiling',
-      'scheduler/tracing': 'scheduler/tracing-profiling'
+      'scheduler/tracing': 'scheduler/tracing-profiling',
     }
   },
 

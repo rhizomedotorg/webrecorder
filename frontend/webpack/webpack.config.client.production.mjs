@@ -1,7 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
 import { merge } from 'webpack-merge';
-import { fileURLToPath } from 'node:url';
 
 import CopyPlugin from 'copy-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
