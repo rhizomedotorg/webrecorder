@@ -63,6 +63,10 @@ export default {
     ]
   },
 
+  ignoreWarnings: [
+    (warning) => true
+  ],
+
   resolve: {
     alias: {
       components: path.resolve(__dirname, '../src/components'),
@@ -97,6 +101,10 @@ export default {
       INTERNAL_PORT: 80,
     })
   ],
+
+  stats: {
+    warnings: false
+  },
 
   watchOptions: {
     aggregateTimeout: 300,

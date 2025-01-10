@@ -5,7 +5,6 @@ import OutsideClick from 'components/OutsideClick';
 import { Button, Dropdown, DropdownButton, Form, InputGroup } from 'react-bootstrap';
 import { LoaderIcon, SearchIcon, XIcon } from 'components/icons';
 
-
 import "react-datepicker/dist/react-datepicker.css";
 import './style.scss';
 
@@ -32,7 +31,7 @@ const humanDateFormat = (dt) => {
   return `${dt.getUTCFullYear()}-${s(dt.getUTCMonth() + 1).padStart(2, '0')}-${s(dt.getUTCDate()).padStart(2, '0')}T${s(dt.getUTCHours()).padStart(2, '0')}:${s(dt.getUTCMinutes()).padStart(2, '0')}`;
 };
 
-class Searchbox extends PureComponent {
+class SearchBox extends PureComponent {
   static propTypes = {
     collection: PropTypes.object,
     clear: PropTypes.func,
@@ -209,7 +208,7 @@ class Searchbox extends PureComponent {
       const qs = new URLSearchParams(props.location.search);
 
       if (qs.has('search') || qs.has('url')) {
-        props.search(qs.get('user'), qs.get('coll'), qs.get('params'), qs.get('fullText')); // TODO - test this
+        props.search(qs.get('user'), qs.get('coll'), qs.get('params'), qs.get('fullText'));
         search = qs.get('search');
         searchFrag = qs.get('search');
         urlFrag = qs.has('url') ? decodeURIComponent(qs.get('url')) : '';
@@ -537,4 +536,4 @@ class Searchbox extends PureComponent {
 }
 
 
-export default Searchbox;
+export default SearchBox;

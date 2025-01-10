@@ -4,9 +4,11 @@ import path from 'node:path';
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 
-require('@babel/register')({
+require('@babel/register');
+/*
+({
   only: [/node_modules(\/|\\)react-rte/]
-});
+});*/
 
 // ignore css imports within react-rte
 require.extensions['.css'] = () => {};

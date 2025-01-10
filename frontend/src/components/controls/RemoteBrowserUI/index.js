@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'react-bootstrap';
+import CBrowser from 'shepherd-client/src/browser.js';
 
 import WebSocketHandler from 'helpers/ws';
 import { getStorage } from 'helpers/utils';
@@ -11,8 +12,6 @@ import { createRemoteBrowser } from 'store/modules/remoteBrowsers';
 import config from 'config';
 
 import './style.scss';
-
-const CBrowser = !__DESKTOP__ && !__PLAYER__ && __CLIENT__ && require('shepherd-client/src/browser').default;
 
 
 class RemoteBrowserUI extends Component {
